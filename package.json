@@ -2,7 +2,7 @@
   "name": "fixmate",
   "version": "1.0.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/",
   "dependencies": {
     "@csstools/normalize.css": "^12.1.1",
     "react": "^18.2.0",
