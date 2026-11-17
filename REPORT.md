@@ -15,7 +15,7 @@
 | **Business Name** | **FixMate** |
 | **Business Domain** | On-Demand Home Services & Maintenance Marketplace |
 | **Reference Website Investigated** | [HomeGenie](https://homegenie.lovable.app) |
-| **Public GitHub Repository** | `https://github.com/abdulrehman-24i2092/fixmate-web` |
+| **Public GitHub Repository** | `https://github.com/Abdul-dev909/fixmate-web` |
 | **Live Deployed Application** | `https://fixmate-web.vercel.app` |
 | **Final Commit Hash** | `3fa1bc9` |
 
