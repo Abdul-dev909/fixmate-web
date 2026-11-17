@@ -1,0 +1,67 @@
+.filter-sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.select-control {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select-control:focus {
+  border-color: var(--primary);
+}
+
+.results-counter {
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.results-counter strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 650px) {
+  .filter-sort-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .filter-item {
+    justify-content: space-between;
+  }
+  .results-counter {
+    margin-left: 0;
+    text-align: center;
+    padding-top: 0.4rem;
+    border-top: 1px dashed var(--border);
+  }
+}

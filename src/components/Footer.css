@@ -1,0 +1,66 @@
+.footer {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  margin-top: 4rem;
+  padding: 3rem 1.25rem 2rem;
+  border-top: 1px solid var(--border);
+  transition: background-color 0.25s ease;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.footer-info h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.footer-info p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+}
+
+.footer-meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.25rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.academic-badge {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.simulation-notice {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
