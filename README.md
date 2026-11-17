@@ -60,8 +60,8 @@ Builds the app for production to the `build` directory.
 ## 3. GitHub & Deployment Links
 
 - **Public GitHub Repository:** [https://github.com/Abdul-dev909/fixmate-web](https://github.com/Abdul-dev909/fixmate-web)
-- **Live Deployed Website:** [https://fixmate-web.vercel.app](https://fixmate-web.vercel.app) *(or Netlify/Vercel URL)*
-- **Final Commit Hash:** `3fa1bc9` *(updated upon milestone completion)*
+- **Live Deployed Website:** [https://fixmate-web-delta.vercel.app](https://fixmate-web-delta.vercel.app)
+- **Final Application Commit Hash:** `dba5554`
 
 ---
 
