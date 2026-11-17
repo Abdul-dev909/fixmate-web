@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CS4032 Assignment 02 Report - Abdul Rehman (24i-2092)</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 10.5pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .header-box {
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+  }
+  .header-title {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+  }
+  .header-sub {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #2563eb;
+    margin: 0 0 6px 0;
+  }
+  .header-meta {
+    font-size: 9pt;
+    color: #64748b;
+    margin: 0;
+  }
+  h2 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1e40af;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    page-break-after: avoid;
+  }
+  p, ul, ol {
+    margin: 0 0 8px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 16px 0;
+    font-size: 9pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f1f5f9;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  .code-block {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: Consolas, monospace;
+    font-size: 8.5pt;
+    white-space: pre-wrap;
+    margin: 8px 0;
+    color: #0f172a;
+  }
+  .badge {
+    display: inline-block;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 8pt;
+    font-weight: 700;
+  }
+  .badge-pass {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+  .strong {
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-box">
+  <div class="header-title">National University of Computer and Emerging Sciences, Islamabad</div>
+  <div class="header-sub">CS4032 Web Programming — Assignment 02 Report: Business Website Development Using React</div>
+  <div class="header-meta">Fictional Business: <strong>FixMate</strong> (On-Demand Home Services Marketplace in Islamabad) | Reference Site: <strong>HomeGenie</strong></div>
+</div>
+
+<h2>Section 1: Student and Project Details</h2>
+<table>
+  <tr><th style="width: 28%;">Field</th><th>Detail</th></tr>
+  <tr><td class="strong">Student Name</td><td>Abdul Rehman</td></tr>
+  <tr><td class="strong">Roll Number</td><td>24i-2092</td></tr>
+  <tr><td class="strong">Program &amp; Section</td><td>BS Cyber Security — Section B</td></tr>
+  <tr><td class="strong">Course &amp; Semester</td><td>Web Programming (CS4032) — Fall 2026</td></tr>
+  <tr><td class="strong">Business Identity</td><td>FixMate (fixmate.pk)</td></tr>
+  <tr><td class="strong">Business Domain</td><td>On-Demand Home Care, Maintenance, &amp; Repair Services</td></tr>
+  <tr><td class="strong">Reference Website</td><td>https://homegenie.lovable.app (HomeGenie)</td></tr>
+  <tr><td class="strong">Public GitHub Repository</td><td>https://github.com/abdulrehman-24i2092/fixmate-web</td></tr>
+  <tr><td class="strong">Live Deployed Website</td><td>https://fixmate-web.vercel.app</td></tr>
+  <tr><td class="strong">Final Commit Hash</td><td><code>77bfb44f9350dc57892977132e6cd2904c0f9d2c</code> (short: <code>77bfb44</code>)</td></tr>
+</table>
+
+<h2>Section 2: Business Profile</h2>
+<table>
+  <tr><th style="width: 25%;">Element</th><th>Required Detail</th></tr>
+  <tr>
+    <td class="strong">Business Identity</td>
+    <td><strong>FixMate</strong>: A dedicated on-demand home maintenance and repairs web platform providing reliable, transparently priced household services by certified local professionals.</td>
+  </tr>
+  <tr>
+    <td class="strong">Primary Audience</td>
+    <td>Residents, homeowners, apartment dwellers, working professionals, and university students across Islamabad needing immediate, verified, and safe home repairs.</td>
+  </tr>
+  <tr>
+    <td class="strong">Operating Area</td>
+    <td>Islamabad Capital Territory (Core Sectors: F-6, F-7, F-8, F-10, F-11, G-6, G-7, G-8, G-9, G-10, I-8, I-10, I-14, E-7, E-11, H-8, H-9).</td>
+  </tr>
+  <tr>
+    <td class="strong">Main Customer Task</td>
+    <td>Browse services, discover verified provider backgrounds, verify real-time slot capacity, select appointment slots, adjust quantities, review pricing calculations, and submit bookings with cash-on-delivery certainty.</td>
+  </tr>
+  <tr>
+    <td class="strong">Business Goal</td>
+    <td>Facilitate trustworthy on-demand service bookings while incentivizing larger basket sizes through an automated service fee waiver on orders exceeding PKR 10,000.</td>
+  </tr>
+  <tr>
+    <td class="strong">Offering (12 Records)</td>
+    <td>
+      1. Deep Home Cleaning (Cleaning)<br>
+      2. AC Service &amp; Repair (Appliance Repair)<br>
+      3. Electrician Services (Electrical)<br>
+      4. Plumbing Solutions (Plumbing)<br>
+      5. Pest Control (Cleaning)<br>
+      6. Painting &amp; Wall Repair (Renovation)<br>
+      7. Carpenter &amp; Furniture Repair (Carpentry)<br>
+      8. Home Shifting &amp; Packing (Moving)<br>
+      9. CCTV &amp; Security Installation (Electrical)<br>
+      10. Gardening &amp; Landscaping (Outdoor)<br>
+      11. Water Tank Cleaning (Cleaning)<br>
+      12. Geyser &amp; Water Heater Service (Appliance Repair)
+    </td>
+  </tr>
+</table>
+
+<h2>Section 3: Operating Rules</h2>
+<table>
+  <tr>
+    <th>Rule Category</th>
+    <th>1. Exact Condition</th>
+    <th>2. Where User is Told</th>
+    <th>3. Application Response</th>
+    <th>4. Boundary Case</th>
+  </tr>
+  <tr>
+    <td class="strong">Availability / Capacity<br><em>(Rule 1: Slot Capacity)</em></td>
+    <td>Each appointment slot has a capacity limit: <code>maxBookingsPerSlot</code>. Remaining spots = <code>max - currentBookings[slot]</code>. If <code>remaining &lt;= 0</code>, slot is full.</td>
+    <td>Directly on the slot selection pills on <code>/services/:id</code> with live count badges ("2 left", "1 left", "Fully Booked").</td>
+    <td>Disables saturated slot buttons, renders "Fully Booked" in red, and blocks adding to cart if an invalid slot is targeted.</td>
+    <td><strong>Boundary:</strong> Exactly 1 booking left. Result: Button remains selectable with an explicit warning "1 left" and locks upon reaching limit.</td>
+  </tr>
+  <tr>
+    <td class="strong">Eligibility / Compatibility<br><em>(Rule 2: Sector Coverage)</em></td>
+    <td>A booking is eligible only if customer's sector is included in <code>service.areasCovered</code>.</td>
+    <td>On <code>/services/:id</code> (coverage list &amp; live sector validator) and at <code>/checkout</code> during sector selection.</td>
+    <td>Displays green "✓ Service is available in Sector X" if valid; shows red "✕ Service does not cover Sector Y" and blocks submission if invalid.</td>
+    <td><strong>Boundary:</strong> Periphery sector like I-14 which is covered by heavy services (moving, tank cleaning) but excluded by local repair. Properly caught at checkout.</td>
+  </tr>
+  <tr>
+    <td class="strong">Pricing / Fulfilment<br><em>(Rule 3: Fee Waiver Threshold)</em></td>
+    <td>Orders incur standard 5% service fee. If <code>subtotal &gt;= PKR 10,000</code>, the 5% platform fee is completely waived (Fee = PKR 0).</td>
+    <td>In the calculated summary sidebar on <code>/cart</code> and <code>/checkout</code>, with an interactive threshold reminder banner.</td>
+    <td>Dynamically adjusts the total price without reload. When &gt;= 10,000, displays "FREE / Waived" badge and saves 5% of order.</td>
+    <td><strong>Boundary:</strong> Subtotal exactly PKR 10,000. Result: Service fee drops from PKR 500 to PKR 0 (Free Service Waiver triggered).</td>
+  </tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>Section 4: Reference-Site Investigation (HomeGenie)</h2>
+<p><strong>Reference Website URL:</strong> <a href="https://homegenie.lovable.app">https://homegenie.lovable.app</a> | <strong>Domain:</strong> Home Services &amp; Repairs</p>
+
+<h3>Problem 1: Broken Dark Mode Toggle Button</h3>
+<ul>
+  <li><strong>Task User is Trying to Complete:</strong> Toggle the website appearance between light and dark modes for readability in low-light environments.</li>
+  <li><strong>What Goes Wrong:</strong> Clicking the moon/sun icon button does not trigger any theme stylesheet changes or persistent state update; the site remains stuck in light mode.</li>
+  <li><strong>Business Consequence:</strong> Accessibility barrier causing eye strain for night-time users, leading to quick site abandonment and poor impression of technical quality.</li>
+  <li><strong>How FixMate Addresses It:</strong> Implemented a central <code>ThemeContext</code> managing a <code>data-theme</code> attribute on the root <code>&lt;html&gt;</code> element, persisted in <code>localStorage</code>, with CSS variables across all components ensuring smooth, zero-flash transitions.</li>
+</ul>
+
+<h3>Problem 2: Service Cards Conceal Provider Details on Click</h3>
+<ul>
+  <li><strong>Task User is Trying to Complete:</strong> Review assigned provider credentials, track record, and verification status before booking someone into their residence.</li>
+  <li><strong>What Goes Wrong:</strong> Service cards on HomeGenie provide no working provider details upon clicking, hiding technician identity behind a non-responsive interface.</li>
+  <li><strong>Business Consequence:</strong> Loss of customer trust and high checkout abandonment; homeowners are hesitant to book unverified unknown contractors.</li>
+  <li><strong>How FixMate Addresses It:</strong> Renders provider firm name, verified badge, and years of experience directly on every service card. Furthermore, the <code>/services/:id</code> detail route features a dedicated Provider Profile section with direct helpline and warranty info.</li>
+</ul>
+
+<h3>Problem 3: Homepage Search Bar Fails on Vague / Cross-Category Queries</h3>
+<ul>
+  <li><strong>Task User is Trying to Complete:</strong> Search using intuitive problem terms such as "ac cleaning", "leak repair", or "pest".</li>
+  <li><strong>What Goes Wrong:</strong> HomeGenie's search executes strict exact title/category matching. Searching "ac cleaning" yields 0 results because AC is categorized under appliance repair and cleaning is a separate bucket.</li>
+  <li><strong>Business Consequence:</strong> Customers falsely conclude the platform does not service ACs or pipe leaks, abandoning the platform for competitors.</li>
+  <li><strong>How FixMate Addresses It:</strong> Implemented a tokenized fuzzy search utility (<code>src/utils/search.js</code>) scoring matches across title, category, description, and tags simultaneously, supplemented by quick-search chips.</li>
+</ul>
+
+<h2>Section 5: Frontend Architectural Decisions (DECISIONS.md Summary)</h2>
+<table>
+  <tr>
+    <th style="width: 15%;">Decision</th>
+    <th style="width: 23%;">Decision Chosen</th>
+    <th style="width: 18%;">Alternative Considered</th>
+    <th style="width: 24%;">Reason</th>
+    <th style="width: 20%;">Tradeoff</th>
+  </tr>
+  <tr>
+    <td class="strong">1. Theme Persistence (State &amp; Interaction)</td>
+    <td>React <code>ThemeContext</code> setting <code>data-theme</code> on root HTML element and saving to <code>localStorage</code>.</td>
+    <td>Class-based toggling on individual React components.</td>
+    <td>Guarantees 100% theme consistency across current and future views with zero flash on reload.</td>
+    <td>Requires discipline with semantic CSS variables rather than hardcoded hex colors.</td>
+  </tr>
+  <tr>
+    <td class="strong">2. Provider Transparency (Hierarchy &amp; Layout)</td>
+    <td>Inline provider badges on cards + comprehensive Provider Profile Card on <code>/services/:id</code>.</td>
+    <td>Modal dialog appearing on card click.</td>
+    <td>Establishes immediate trust in home services without unnecessary modal navigation layers.</td>
+    <td>Consumes vertical card real-estate, requiring compact responsive styling on mobile (390px).</td>
+  </tr>
+  <tr>
+    <td class="strong">3. Multi-Token Search (Interaction &amp; Filtering)</td>
+    <td>Tokenized scoring algorithm matching across names, tags, categories, and descriptions with quick chips.</td>
+    <td>Strict title substring matching or third-party server index.</td>
+    <td>Accommodates natural customer queries ("ac cleaning") without requiring backend server overhead.</td>
+    <td>Multi-token JS scoring scales efficiently for hundreds of records; larger catalogs need indexing.</td>
+  </tr>
+</table>
+
+<h2>Section 6: Implemented Application Journey</h2>
+<p>The deployed FixMate application delivers a complete, cohesive 7-step customer journey:</p>
+<ol>
+  <li><strong>Browse:</strong> Home (<code>/</code>) and Catalog (<code>/services</code>) display 12 services with category tags, pricing, and verified provider badges.</li>
+  <li><strong>Search &amp; Narrow Down:</strong> Debounced fuzzy search with live counter, category filter dropdown, and 5-way sorting (Price Asc/Desc, Rating, Name, Popularity).</li>
+  <li><strong>Open Details:</strong> Dynamic route <code>/services/:id</code> showcases complete description, provider profile, and covered sectors.</li>
+  <li><strong>Build &amp; Change Selection:</strong> Slot capacity selection (Rule 1) and numerical quantity control (1–6 boundary).</li>
+  <li><strong>Review Summary:</strong> <code>/cart</code> displays dynamic item list, quantity modification (+/-), removal, subtotal, and 5% fee waiver check (Rule 3).</li>
+  <li><strong>Complete Form:</strong> <code>/checkout</code> contains a controlled React form validating name (min 3 chars), Pakistani phone regex (<code>03XX-XXXXXXX</code>), sector coverage (Rule 2), and street address.</li>
+  <li><strong>Confirmation:</strong> <code>/confirmation</code> generates booking reference (<code>#FXM-XXXXXX</code>), presents full customer breakdown, clears cart, and offers printable receipt.</li>
+</ol>
+
+<div class="page-break"></div>
+
+<h2>Section 7: Verification and Automated Test Results</h2>
+
+<h3>7.1 Automated Business Rule Tests (Task 6.2)</h3>
+<p>Executed natively with Node.js built-in test runner (<code>node --test src/__tests__/bookingRules.test.mjs</code>):</p>
+<div class="code-block">
+▶ Business Operating Rules Test Suite (Task 6.2)
+  ▶ Rule 1: Slot Availability (Capacity Limits)
+    ✔ Case 1 (Valid Input): Slot with open capacity returns valid=true and correct remaining count (1.1ms)
+    ✔ Case 2 (Boundary Limit): Slot with exactly 1 spot remaining before saturation (0.2ms)
+    ✔ Case 3 (Breaks Rule): Slot at full capacity (4/4 booked) returns valid=false (0.1ms)
+    ✔ Case 4 (Edge Case): Non-existent slot returns valid=false (0.7ms)
+  ✔ Rule 1: Slot Availability (Capacity Limits) (3.0ms)
+  ▶ Rule 2: Geographic Service Area Eligibility
+    ✔ Case 1 (Valid Area): Customer in covered sector returns valid=true (0.2ms)
+    ✔ Case 2 (Case Insensitive Match): Sector input matches regardless of lowercase/whitespace (0.1ms)
+    ✔ Case 3 (Breaks Rule): Customer outside covered sectors returns valid=false (0.2ms)
+  ✔ Rule 2: Geographic Service Area Eligibility (0.9ms)
+  ▶ Rule 3: Pricing &amp; Service Fee Waiver Threshold (PKR 10,000)
+    ✔ Case 1 (Standard Order &lt; 10,000): Applies standard 5% service fee (89.9ms)
+    ✔ Case 2 (Boundary Limit == 10,000): Exactly PKR 10,000 qualifies for fee waiver (fee = 0) (0.4ms)
+    ✔ Case 3 (Breaks Threshold &gt; 10,000): PKR 15,000 qualifies for fee waiver (0.4ms)
+    ✔ Case 4 (Edge Case - Negative Input): Returns zeroed out safe fallback (0.3ms)
+  ✔ Rule 3: Pricing &amp; Service Fee Waiver Threshold (PKR 10,000) (91.6ms)
+✔ Business Operating Rules Test Suite (Task 6.2) (96.1ms)
+ℹ tests 11 | pass 11 | fail 0 | cancelled 0 | duration_ms 235.8ms
+</div>
+
+<h3>7.2 Manual Verification &amp; Edge-Case Checklist</h3>
+<table>
+  <tr>
+    <th>Edge Case Scenario</th>
+    <th>User Action Taken</th>
+    <th>Expected Result</th>
+    <th>Observed Result</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td class="strong">Simulated Loader Failure</td>
+    <td>Enable demo checkbox on <code>/</code> or <code>/services</code></td>
+    <td>Displays friendly error card with working "Try Again" retry CTA</td>
+    <td>Error card displayed; unchecking and clicking "Try Again" successfully reloads data</td>
+    <td><span class="badge badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td class="strong">Invalid Parameterized Route</td>
+    <td>Navigate to <code>/services/svc-999</code></td>
+    <td>Shows helpful feedback card with links to <code>/services</code> and <code>/</code></td>
+    <td>"Service Not Found" card displayed with clear navigation links</td>
+    <td><span class="badge badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td class="strong">Zero Matches Search</td>
+    <td>Search for non-existent keyword <code>"xyz999"</code></td>
+    <td>Displays empty state with guidance and "Reset All Filters" CTA</td>
+    <td>Empty state displayed; clicking Reset restores all 12 catalog records</td>
+    <td><span class="badge badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td class="strong">Invalid Form Submission</td>
+    <td>Submit <code>/checkout</code> with invalid phone (<code>"123"</code>)</td>
+    <td>Form blocks submission, highlights phone error, preserves name and address</td>
+    <td>Inline red error displayed; valid name and address remain intact in state</td>
+    <td><span class="badge badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td class="strong">Slot Capacity Saturation</td>
+    <td>Attempt booking on 5:00 PM slot (Deep Cleaning)</td>
+    <td>Slot button is disabled, marked "Fully Booked", and prevents cart addition</td>
+    <td>Pill renders greyed out with "Fully Booked" label; click is prevented</td>
+    <td><span class="badge badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td class="strong">Cart &amp; Theme Persistence</td>
+    <td>Add items, switch to Dark Mode, hard refresh (Ctrl+F5)</td>
+    <td>Theme and selected cart items restore seamlessly from <code>localStorage</code></td>
+    <td>Dark theme applied immediately and cart badge indicates correct saved items</td>
+    <td><span class="badge badge-pass">PASS</span></td>
+  </tr>
+</table>
+
+<h2>Section 8: Known Limitations</h2>
+<ol>
+  <li><strong>Simulated Backend API:</strong> Data loading simulates network latency with an asynchronous mock loader (<code>src/utils/loader.js</code>); no external cloud database is queried.</li>
+  <li><strong>Simulated Order Fulfilment:</strong> Orders generate a client-side simulated booking reference (<code>#FXM-XXXXXX</code>) and confirm via Cash on Delivery; live payment gateway processing is simulated.</li>
+  <li><strong>Client-Side Cart Storage:</strong> Cart state persists via browser <code>localStorage</code> and does not sync across different physical devices.</li>
+</ol>
+
+</body>
+</html>
